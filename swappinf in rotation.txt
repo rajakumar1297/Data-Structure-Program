@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void swap()
+{     int a[5],i,b[5],d=4;
+      for(i=0;i<5;i++)
+      scanf("%d",&a[i]);
+            for(i=0;i<5;i++)
+            {
+                int first=a[0];
+                b[i]=a[i+1];
+                if(i==4)
+                {
+                    b[i]=first;
+                    break;
+                }
+            }
+    for(i=0;i<5;i++)
+    printf("%d ",b[i]);
+}
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int r;
+    printf("Enter Rotation: ");
+    scanf("%d",&r);
+    while(r>0)
+    swap();
+    return 0;
+}
